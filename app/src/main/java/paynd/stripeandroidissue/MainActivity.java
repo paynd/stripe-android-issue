@@ -29,15 +29,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         init();
     }
 
@@ -62,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(redirectUrl));
                     startActivity(browserIntent);
                 } else {
-                    Log.d(TAG, "onSuccess: No redirect!");
+                    Log.d(TAG, "onSuccess: Ok, redirect complete.");
                 }
             }
         });
